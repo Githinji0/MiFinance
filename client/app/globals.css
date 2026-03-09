@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Define the variable names so Tailwind generates the classes */
+  --color-bg: #F8FAF9;
+  --color-surface: #FFFFFF;
+  --color-primary: #1B5E20;
+  --color-accent: #4CAF50;
+  --color-text-main: #1A201C;
+  --color-text-muted: #5F6D64;
+  --color-border: #E0E4E1;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* 🌙 Handle Dark Mode Re-assignment */
+/* This is standard CSS, placed outside the @theme block */
+[data-theme='dark'] {
+  --color-bg: #0D1310;
+  --color-surface: #161D19;
+  --color-primary: #66BB6A;
+  --color-accent: #2E7D32;
+  --color-text-main: #ECF2EE;
+  --color-text-muted: #A0ADA5;
+  --color-border: #242E29;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    @apply transition-colors duration-300;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
