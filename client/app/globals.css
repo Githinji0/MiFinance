@@ -9,6 +9,10 @@
   --color-text-main: #1A201C;
   --color-text-muted: #5F6D64;
   --color-border: #E0E4E1;
+  --color-gray: #1A1A1A;
+  --color-hover: #2C2C2C;
+
+
 }
 
 /* 🌙 Handle Dark Mode Re-assignment */
