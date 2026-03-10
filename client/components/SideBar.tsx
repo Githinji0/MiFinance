@@ -19,7 +19,7 @@ export default function SideBar() {
   return (
     <nav
       className={[
-        "bg-gray p-4 relative h-screen transition-all duration-200 overflow-hidden",
+        "bg-gray p-4 relative min-h-screen transition-all duration-200 overflow-hidden",
         isCollapsed ? "w-16" : "w-64",
       ].join(" ")}
     >
