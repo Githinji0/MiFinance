@@ -59,8 +59,8 @@ export const AddTransactionModal: React.FC<AddTransactionModalProps> = ({
 
     return (
         <div className="fixed inset-0 bg-transparent bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 w-96">
-                <h2 className="text-xl font-bold mb-4">Add Transaction</h2>
+            <div className="bg-hover rounded-lg p-6 w-96">
+                <h2 className="text-xl text-surface font-bold mb-4">Add Transaction</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
                         type="text"
@@ -69,7 +69,9 @@ export const AddTransactionModal: React.FC<AddTransactionModalProps> = ({
                         value={formData.description}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 py-2 border rounded-md"
+                        className="w-full px-3 py-2 border rounded-md
+                        
+                        placeholder:text-surface"
                     />
                     <input
                         type="number"
@@ -79,13 +81,13 @@ export const AddTransactionModal: React.FC<AddTransactionModalProps> = ({
                         onChange={handleChange}
                         required
                         step="0.01"
-                        className="w-full px-3 py-2 border rounded-md"
+                        className="w-full px-3 py-2 border rounded-md placeholder:text-surface"
                     />
                     <select
                         name="type"
                         value={formData.type}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border rounded-md"
+                        className="w-full px-3 py-2 border rounded-md placeholder:text-gray text-surface"
                     >
                         <option value="expense">Expense</option>
                         <option value="income">Income</option>
@@ -96,7 +98,7 @@ export const AddTransactionModal: React.FC<AddTransactionModalProps> = ({
                         value={formData.date}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 py-2 border rounded-md"
+                        className=" text-surface w-full px-3 py-2 border rounded-md placeholder:text-surface"
                     />
                     <input
                         type="text"
@@ -104,19 +106,19 @@ export const AddTransactionModal: React.FC<AddTransactionModalProps> = ({
                         placeholder="Category"
                         value={formData.category}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border rounded-md"
+                        className="w-full px-3 py-2 border rounded-md placeholder:text-surface"
                     />
                     <div className="flex gap-2">
                         <button
                             type="submit"
-                            className="flex-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
+                            className="flex-1 bg-accent text-white py-2 rounded-md hover:bg-primary transition-colors"
                         >
                             Add
                         </button>
                         <button
                             type="button"
                             onClick={onClose}
-                            className="flex-1 bg-gray-300 py-2 rounded-md hover:bg-gray-400"
+                            className="flex-1 bg-transparent py-2 rounded-md hover:bg-red-400 text-surface transition-colors"
                         >
                             Cancel
                         </button>
