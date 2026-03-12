@@ -63,7 +63,7 @@ function DonutTooltipContent({
       }}
     >
       <div style={{ fontWeight: 700, marginBottom: 4 }}>{name}</div>
-      <div style={{ color: "#6B7280" }}>{formatMoney(value)}</div>
+      <div style={{ color: "white" }}>{formatMoney(value)}</div>
     </div>
   );
 }
