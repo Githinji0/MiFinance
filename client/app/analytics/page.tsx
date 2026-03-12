@@ -1,8 +1,9 @@
 import MonthlyOverviewBarChart from "@/components/MonthlySpendGraph";
+import SpendingByCategoryDonut from "@/components/SpendingByCategory";
 
 export default function Analytics() {
   return (
-    <div className="flex flex-col min-h-screen p-10 bg-zinc-50 font-sans dark:bg-gray w-full">
+    <div className="flex flex-col min-h-screen p-10 bg-zinc-50 font-sans dark:bg-gray w-full gap-7">
       <div className=" w-full flex flex-col gap-4 mb-5">
         <h1 className="text-4xl font-bold text-gray dark:text-surface">
           Analytics Page
@@ -20,6 +21,12 @@ text-lg text-gray-600 dark:text-surface
           Monthly Overview
         </h1>
         <MonthlyOverviewBarChart />
+      </div>
+      <div className=" w-full flex flex-col gap-4 p-4">
+        <h1 className="text-xl font-semibold text-gray dark:text-surface">
+          Spending by Category
+        </h1>
+        <SpendingByCategoryDonut />
       </div>
     </div>
   );
